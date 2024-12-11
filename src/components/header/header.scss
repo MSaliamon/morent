@@ -1,0 +1,33 @@
+@use '../../sass/mixins' as mixin;
+@use '../../sass/vars' as var;
+@use '../../sass/reset' as reset;
+
+.header {
+    @include mixin.flex(row, space-between, center, 2px);
+    padding: 40px 60px;
+    &-wrap {
+        @include mixin.flex(row, flex-start, center, 64px);
+        width: 50%;
+        .search {
+            @include mixin.flex(row, space-between, center, 0px);
+            border: 1px solid var.$border-color;
+            padding: 20px 12px;
+            border-radius: 70px;
+            width: 100%;
+            &__wrap {
+                @include mixin.flex(row, center, center, 20px);
+                width: 100%;
+                &-input {
+                    @include mixin.PlusJakartaSans(16px, 400, 24px);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.logo {
+    &__text {
+        @include mixin.PlusJakartaSans(24px, 700, 32px);
+        color: var.$third-color;
+    }
+}
