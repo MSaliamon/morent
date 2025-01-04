@@ -1,0 +1,68 @@
+@use '../../../sass/mixins' as mixin;
+@use '../../../sass/vars' as var;
+@use '../../../sass/reset' as reset;
+
+.section1 {
+    @include mixin.flex(column, center, center, 32px);
+    &-container {
+        @include mixin.flex(row, center, center, 32px);
+        .section1-card {
+            @include mixin.flex(column, center, center, 0px);
+            padding: 24px 97px 10px 24px;
+            background-color: var.$fourth-color;
+            &__box {
+                @include mixin.flex(column, flex-start, flex-start, 18px);
+                &-title {
+                    @include mixin.PlusJakartaSans(32px, 600, 150%);
+                    width: 60%;
+                    color: var.$background-color;
+                }
+                &-text {
+                    @include mixin.PlusJakartaSans(16px, 500, 150%);
+                    width: 53%;
+                    color: var.$background-color;
+                }
+                &-btn {
+                    @include mixin.PlusJakartaSans(16px, 500, 150%);
+                    color: var.$background-color;
+                    background-color: var.$third-color;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+    &-container2 {
+        @include mixin.flex(row, center, center, 44px);
+        .section1-box {
+            @include mixin.flex(column, flex-start, flex-start, 16px);
+            background-color: var.$background-color;
+            padding: 24px;
+            border-radius: 10px;
+            &__label {
+                @include mixin.flex(row, center, center, 4px);
+                &-text {
+                    @include mixin.PlusJakartaSans(16px, 600, 150%);
+                }
+            }
+            &__wrap {
+                @include mixin.flex(row, center, center, 25px);
+                .section1-box__label {
+                    @include mixin.flex(column, flex-start, flex-start, 8px);
+                    &-text {
+                        @include mixin.PlusJakartaSans(16px, 700, 150%);
+                    }
+                    &-select {
+                        @include mixin.PlusJakartaSans(16px, 500, 150%);
+                        opacity: 0.5;
+                    }
+                    
+                }
+            }
+        }
+        .section1-box1 {
+            background-color: var.$third-color;
+            padding: 18px;
+            border-radius: 10px;
+        }
+    }
+}

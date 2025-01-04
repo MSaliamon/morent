@@ -6,7 +6,6 @@ import Notification from '../../assets/home-page/svg/Notification.svg';
 import Dote from '../../assets/home-page/svg/Notif.svg';
 import Settings from '../../assets/home-page/svg/Settings.svg';
 import User from '../../assets/home-page/png/Profil.png';
-
 function Header() {
   return (
     <>
@@ -34,5 +33,4 @@ function Header() {
     </>
   )
 }
-
 export default Header
