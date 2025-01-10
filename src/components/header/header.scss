@@ -24,6 +24,13 @@
             }
         }
     }
+    &-user {
+        @include mixin.flex(row, flex-start, center, 32px);
+        &__reges {
+            @include mixin.PlusJakartaSans(16px, 500, 24px);
+            color: var.$text-color;
+        }
+    }
 }
 .logo {
     &__text {

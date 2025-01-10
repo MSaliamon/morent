@@ -25,9 +25,8 @@ function Header() {
         <div className="header-user">
           <img src={like} alt="like" className="header-user__heart" />
           <img src={Notification} alt="Notification" className="header-user__bell" />
-          <img src={Dote} alt="dote" className="header-user__dote" />
           <img src={Settings} alt="Settings" className="header-user__settings" />
-          <img src={User} alt="User" className="header-user__avatar" />
+          <a href="" className="header-user__reges">Sign In</a>
         </div>
       </header>
     </>
