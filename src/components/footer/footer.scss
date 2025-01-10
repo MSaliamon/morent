@@ -1,0 +1,46 @@
+@use '../../sass/mixins' as mixin;
+@use '../../sass/vars' as var;
+@use '../../sass/reset' as reset;
+
+.footer {
+    @include mixin.flex(column, flex-start, flex-start, 72px);
+    padding: 80px 60px;
+    &-container {
+        @include mixin.flex(row, space-between, center, 0px);
+        width: 100%;
+        .footer-box {
+            @include mixin.flex(column, flex-start, flex-start, 16px);
+            &__text {
+                @include mixin.PlusJakartaSans(16px, 500, 150%);
+                width: 53%;
+            }
+        }
+        .footer-nav {
+            @include mixin.flex(row, flex-start, flex-start, 80px);
+            &__list {
+                @include mixin.flex(column, flex-start, flex-start, 16px);
+            }
+            &__link {
+                @include mixin.PlusJakartaSans(16px, 500, 150%);
+                color: var.$text-color;
+                opacity: 0.5;
+            }
+        }
+    }
+    &-container2 {
+        @include mixin.flex(row, space-between, center, 0px);
+        width: 100%;
+        &__text {
+            @include mixin.PlusJakartaSans(16px, 600, 150%);
+        }
+        &__box {
+            @include mixin.flex(row, center, center, 60px);
+            &-text1 {
+                @include mixin.PlusJakartaSans(16px, 600, 150%);
+            }
+            &-text2 {
+                @include mixin.PlusJakartaSans(16px, 600, 150%);
+            }
+        }
+    }
+}

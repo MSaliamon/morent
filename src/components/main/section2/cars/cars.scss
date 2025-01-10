@@ -1,0 +1,47 @@
+@use '../../../../sass/mixins' as mixin;
+@use '../../../../sass/vars' as var;
+@use '../../../../sass/reset' as reset;
+
+.section2-car {
+    @include mixin.flex(column, center, flex-start, 64px);
+    background-color: var.$background-color;
+    padding: 24px;
+    &__cont {
+        @include mixin.flex(row, space-between, center, 32px);
+        width: 100%;
+        &-textbox {
+            @include mixin.flex(column, flex-start, flex-start, 4px);
+            &-title {
+                @include mixin.PlusJakartaSans(20px, 700, 150%);
+            }
+            &-text {
+                @include mixin.PlusJakartaSans(14px, 700, 150%);
+                opacity: 0.5;
+            }
+        }
+    }
+    &__cont2 {
+        @include mixin.flex(row, space-between, center, 0px);
+        width: 100%;
+        &-box {
+            @include mixin.flex(row, center, center, 8px);
+            &-text {
+                @include mixin.PlusJakartaSans(14px, 500, 150%);
+                opacity: 0.5;
+            }
+        }
+    }
+    &__cont3 {
+        @include mixin.flex(row, center, center, 24px);
+        &-text {
+            @include mixin.PlusJakartaSans(20px, 700, 0px);
+        }
+        &-btn {
+            @include mixin.PlusJakartaSans(16px, 600, 150%);
+            padding: 10px 20px;
+            color: var.$background-color;
+            background-color: var.$third-color;
+            border-radius: 4px;
+        }
+    }
+}

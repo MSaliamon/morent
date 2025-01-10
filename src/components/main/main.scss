@@ -3,7 +3,7 @@
 @use '../../sass/reset' as reset;
 
 .main {
-    @include mixin.flex(column, flex-start, flex-start, 32px);
+    @include mixin.flex(column, flex-start, center, 32px);
     padding-top: 32px;
     background-color: var.$main-bg-color;
 }
