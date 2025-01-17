@@ -1,15 +1,17 @@
-import Footer from "./components/footer/Footer"
-import Header from "./components/header/Header"
-import Main from "./components/main/Main"
-function App() {
-  
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/layout/Layout';
+import SignUp from './pages/sign up/SignUp';
+
+function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/morent" element={<Layout />} />
+        <Route path="/morent/SignUp" element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-export default App
+
+export default App;
