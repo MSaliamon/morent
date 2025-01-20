@@ -1,0 +1,36 @@
+@use '../../sass/mixins' as mixin;
+@use '../../sass/vars' as var;
+@use '../../sass/reset' as reset;
+
+.main {
+    @include mixin.flex(column, center, center, 32px);
+    width: 100%;
+    background-color: var.$background-color;
+    &__title {
+        @include mixin.PlusJakartaSans(32px, 600, 150%);
+        text-align: center
+    }
+    &-form {
+        @include mixin.flex(column, center, center, 16px);
+        width: 25%;
+        &__input {
+            width: 60%;
+            background-color: var.$main-bg-color;
+            padding: 10px 30px;
+            border-radius: 20px;
+        }
+        &__btn {
+            @include mixin.PlusJakartaSans(16px, 600, 150%);
+            color: var.$background-color;
+            background-color: var.$third-color;
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: 60%;
+        }
+    }
+    .error-message {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+}

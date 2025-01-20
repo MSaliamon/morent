@@ -26,7 +26,8 @@ function Header() {
           <img src={like} alt="like" className="header-user__heart" />
           <img src={Notification} alt="Notification" className="header-user__bell" />
           <img src={Settings} alt="Settings" className="header-user__settings" />
-          <Link to="/morent/SignUp">Sign Up</Link>
+          <Link to="/SignUp">Sign Up</Link>
+          <Link to="/SignIn">Sign In</Link>
         </div>
       </header>
     </>
