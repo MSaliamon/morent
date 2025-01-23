@@ -3,7 +3,6 @@ import * as yup from "yup";
 import Header from "../../components/header/Header";
 import './SignUp.scss';
 import { useCallback } from "react";
-
 const useYupValidationResolver = validationSchema =>
   useCallback(
     async data => {
@@ -37,9 +36,10 @@ const useYupValidationResolver = validationSchema =>
 const validationSchema = yup.object({
   email: yup.string().email().required(),
   password: yup.string().min(8).max(32).required(),
+  confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match')
 });
 
-function SignIn() {
+function SignUp() {
   const resolver = useYupValidationResolver(validationSchema);
   const { handleSubmit, register, formState, setError } = useForm({ resolver });
   const { errors } = formState;
@@ -61,10 +61,12 @@ function SignIn() {
           {errors.email && <div className="error-message">{errors.email.message}</div>}
           <input {...register("password")} onChange={handleInputChange}  className="main-form__input" placeholder="Enter your password" />
           {errors.password && <div className="error-message">{errors.password.message}</div>}
+          <input {...register("confirmPassword")} onChange={handleInputChange}  className="main-form__input" placeholder="Confirm your password" />
+          {errors.confirmPassword && <div className="error-message">{errors.confirmPassword.message}</div>}
           <button type="submit" className="main-form__btn" >Send</button>
         </form>
       </main>
     </>
   )
 }
-export default SignIn
+export default SignUp
