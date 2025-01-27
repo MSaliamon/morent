@@ -2,6 +2,7 @@ import './cars.scss'
 import Gas from '../../../../assets/home-page/svg/gas-station.svg';
 import Drive from '../../../../assets/home-page/svg/drive.svg';
 import Person from '../../../../assets/home-page/svg/profile-2user.svg';
+import { Link } from 'react-router-dom';
 
 function Cars(props) {
   return (
@@ -30,7 +31,7 @@ function Cars(props) {
         </div>
         <div className="section2-car__cont3">
             <p className="section2-car__cont3-text"> {props.price}</p>
-            <button className="section2-car__cont3-btn">Rent Now</button>
+            <button className="section2-car__cont3-btn"><Link to="/payment" className="section2-car__cont3-btn">Rent Now</Link></button>
         </div>
     </div>
   )
