@@ -63,8 +63,8 @@ function Header() {
             </>
           ) : (
             <>
-              <Link to="/SignUp">Sign Up</Link>
-              <Link to="/SignIn">Sign In</Link>
+              <Link to="SignUp">Sign Up</Link>
+              <Link to="SignIn">Sign In</Link>
             </>
           )}
         </div>
