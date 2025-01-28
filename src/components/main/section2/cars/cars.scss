@@ -42,6 +42,9 @@
             color: var.$background-color;
             background-color: var.$third-color;
             border-radius: 4px;
+            &-text {
+                color: var.$background-color;
+            }
         }
     }
 }
