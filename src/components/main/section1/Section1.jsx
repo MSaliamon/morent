@@ -31,13 +31,13 @@ function Section1() {
             </label>
             <div className="section1-box__wrap">
               <label className="section1-box__label">
-              <p className="section1-box__label-text">Location</p>
-                  <select name="location" id="" className="section1-box__label-select">
-                    <option value="select your city" className="section1-box__label-option">Select your city</option>
-                    <option value="Kyiv">Kyiv</option>
-                    <option value="khmelnitski">khmelnitski</option>
-                    <option value=" lviv">lviv</option>
-                  </select>
+                <p className="section1-box__label-text">Location</p>
+                <select name="location" id="" className="section1-box__label-select">
+                  <option value="select your city" className="section1-box__label-option">Select your city</option>
+                  <option value="Kyiv">Kyiv</option>
+                  <option value="khmelnitski">khmelnitski</option>
+                  <option value=" lviv">lviv</option>
+                </select>
               </label>
               <div className="section1-box__cont">
                 <label  className="section1-box__label">

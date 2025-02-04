@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import Header from "../../components/header/Header";
 import './SignIn.scss';
-import { useCallback, useState, useEffect } from "react";
+import { useCallback} from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";

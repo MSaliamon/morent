@@ -11,7 +11,6 @@ function App() {
         <Route path="/" element={<Layout />} />
         <Route path="SignUp" element={<SignUp />} />
         <Route path="SignIn" element={<SignIn />} />
-        <Route path="Payment" element={<Payment />} />
       </Routes>
     </HashRouter>
   );

@@ -53,9 +53,9 @@ function Header({ username }) {
   return (
     <header className="header">
       <div className="header-wrap">
-        <div className="logo">
+        <Link to="/" className="logo">
           <p className="logo__text">MORENT</p>
-        </div>
+        </Link>
         <form className="search">
           <label className="search__wrap">
             <img src={search} alt="search" className="search__wrap-img" />
