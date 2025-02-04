@@ -2,7 +2,6 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/layout/Layout';
 import SignUp from './pages/sign up/SignUp';
 import SignIn from './pages/sign in/SignIn';
-import Payment from './pages/payment/Payment';
 
 function App() {
   return (
